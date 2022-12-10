@@ -34,6 +34,9 @@ const Filters = () => {
         <Dropdown.Item name="pending" onClick={statusOnClick}>
           Pendientes
         </Dropdown.Item>
+        <Dropdown.Item onClick={statusOnClick}>
+          Todos
+        </Dropdown.Item>
       </DropdownButton>
     </div>
   );
