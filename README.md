@@ -8,13 +8,16 @@ Desarrollar una aplicación que permita listar la información contenida en el a
  - Cualquiera de los Status existentes.
  - Mostrar el total de registros que se están desplegando.
 <br />
+
 ✔️ Ordenar la información:
 - Por fecha.
 - Por id.
 - Por name.
 <br />
+
 ✔️ El manejo de HTTP deberá realizarse mediante Axios.
 <br />
+
 ✔️ API: Haz un llamado a un api endpoint para cargar la data contenido en el arreglo companies. No es necesario proveer la api, solo debe tener una variable para el url donde puedo apuntar el llamado a un servidor que devuelve un arreglo de companies. Para hacer el llamado puedes usar axios o librerías similares.
 
 ## Arreglo de companies:
