@@ -10,17 +10,17 @@ const Filters = () => {
 
   const dispatch = useDispatch();
 
+  const statusOnClick = (e) => {
+    const { name } = e.target;
+    dispatch(setStatusFilter(name));
+  };
+
   useEffect(() => {
     const filteredCompaniesByStatus = companies.filter(
       (company) => company.status === statusFilter.value,
     );
     dispatch(setFilteredCompanies(filteredCompaniesByStatus));
   }, [statusFilter]);
-
-  const statusOnClick = (e) => {
-    const { name } = e.target;
-    dispatch(setStatusFilter(name));
-  };
 
   return (
     <div className="mt-3 mb-5">
