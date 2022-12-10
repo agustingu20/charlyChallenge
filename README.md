@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Challenge Frontend React para Charly.io :rocket:
+## Objetivo del challenge
+Desarrollar una aplicación que permita listar la información contenida en el arreglo de 'companies'. El diseño utilizado es a libre elección.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requerimientos del challenge
 
-## Available Scripts
+✔️ El usuario puede filtrar por:
+- Cualquiera de los Status existentes.
+- Mostrar el total de registros que se están desplegando.
+<br />
+✔️ Ordenar la información:
+- Por fecha.
+- Por id.
+- Por name.
+<br />
+✔️ El manejo de HTTP deberá realizarse mediante Axios.
+<br />
+✔️ API: Haz un llamado a un api endpoint para cargar la data contenido en el arreglo companies. No es necesario proveer la api, solo debe tener una variable para el url donde puedo apuntar el llamado a un servidor que devuelve un arreglo de companies. Para hacer el llamado puedes usar axios o librerías similares.
 
-In the project directory, you can run:
+## Arreglo de companies:
 
-### `npm start`
+```bash
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+const companies = [
+  { id: 1, status: "accepted", name: "001", date: "01/01/2022" },
+  { id: 2, status: "accepted", name: "001", date: "01/01/2022" },
+  { id: 8, status: "accepted", name: "001", date: "10/04/2022" },
+  { id: 4, status: "declined", name: "005", date: "01/02/2022" },
+  { id: 7, status: "pending", name: "005", date: "03/02/2022" },
+  { id: 3, status: "pending", name: "001", date: "01/02/2022" },
+  { id: 9, status: "pending", name: "002", date: "11/04/2022" },
+  { id: 5, status: "declined", name: "002", date: "02/02/2022" },
+  { id: 6, status: "declined", name: "001", date: "02/02/2022" },
+]
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Instalación
+Tener instalado el paquete [npm](https://www.npmjs.com/)
 
-### `npm test`
+### Clonar el repositorio
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+$ git clone https://github.com/agustingu20/challenge-react-alkemy-refactored.git
+$ cd ../path/to/the/file
+$ npm install
+$ npm start
 
-### `npm run build`
+# Autor ✒️
+**Agustín Gómez Urrutia** - [agustingu20](https://github.com/agustingu20)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Librerías 📚
+- Axios
+- React-Bootstrap
+- Bootstrap
+- Redux-toolkit
