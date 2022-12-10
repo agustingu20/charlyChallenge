@@ -1,13 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Dropdown, DropdownButton } from 'react-bootstrap';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilteredCompanies } from '../../app/filteredCompaniesSlice';
+import { setStatusFilter } from '../../app/statusFilterSlice';
+import { companies } from '../../assets/companiesArray';
 
 const Filters = () => {
+  const { statusFilter } = useSelector((state) => state);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const filteredCompaniesByStatus = companies.filter(
+      (company) => company.status === statusFilter.value,
+    );
+    dispatch(setFilteredCompanies(filteredCompaniesByStatus));
+  }, [statusFilter]);
+
+  const statusOnClick = (e) => {
+    const { name } = e.target;
+    dispatch(setStatusFilter(name));
+  };
+
   return (
-    <div className='mt-3 mb-5'>
+    <div className="mt-3 mb-5">
       <DropdownButton id="dropdown-basic-button" title="Filtrar por status: ">
-        <Dropdown.Item name='accepted'>Aceptados</Dropdown.Item>
-        <Dropdown.Item name='declined'>Declinados</Dropdown.Item>
-        <Dropdown.Item name='pending'>Pendientes</Dropdown.Item>
+        <Dropdown.Item name="accepted" onClick={statusOnClick}>
+          Aceptados
+        </Dropdown.Item>
+        <Dropdown.Item name="declined" onClick={statusOnClick}>
+          Declinados
+        </Dropdown.Item>
+        <Dropdown.Item name="pending" onClick={statusOnClick}>
+          Pendientes
+        </Dropdown.Item>
       </DropdownButton>
     </div>
   );
