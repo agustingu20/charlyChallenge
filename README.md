@@ -5,13 +5,13 @@ Desarrollar una aplicación que permita listar la información contenida en el a
 ## Requerimientos del challenge
 
 ✔️ El usuario puede filtrar por:
-- Cualquiera de los Status existentes.
-- Mostrar el total de registros que se están desplegando.
+ - Cualquiera de los Status existentes.
+ - Mostrar el total de registros que se están desplegando.
 <br />
 ✔️ Ordenar la información:
-- Por fecha.
-- Por id.
-- Por name.
+ - Por fecha.
+ - Por id.
+ - Por name.
 <br />
 ✔️ El manejo de HTTP deberá realizarse mediante Axios.
 <br />
