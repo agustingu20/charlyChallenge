@@ -15,7 +15,7 @@ const CompaniesTable = () => {
       </thead>
       <tbody>
         {companies.map((company) => (
-          <tr>
+          <tr key={`companyId-${company.id}`}>
             <td>{company.id}</td>
             <td>{company.status}</td>
             <td>{company.name}</td>
